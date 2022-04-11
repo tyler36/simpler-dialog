@@ -19,29 +19,26 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     <style>
         dialog {
-            transform: translateY(250px);
-            animation: 0.3s fade-in;
+            animation: 0.3s;
         }
 
         dialog::backdrop {
-            background: rgb(34, 34, 34, .4);
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         @keyframes fade-in {
             from {
                 opacity: 0;
+                transform: translateY(50px);
             }
             to {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
 
         dialog[open] {
-            transform: translateY(0);
-        }
-
-        dialog::backdrop {
-            background-color: rgba(0, 0, 0, 0.5);
+            animation: 0.6s fade-in;
         }
     </style>
 </head>
